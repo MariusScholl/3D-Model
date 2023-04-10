@@ -182,12 +182,7 @@ leaflet() %>%
     lng2 = bbox$p2$long, lat2 = bbox$p2$lat,
   )
 
-#________________________________
-# Define Image Size, Funktion von:
-# https://github.com/wcmbishop/rayshader-demo/blob/master/R/image-size.R
-# je höher major_dim, desto genauer die Auflösung des Overlays
 
-image_size <- define_image_size(bbox, major_dim = 7500); image_size
 #________________________________
 # BBOX in spatial polygon umwandeln für elev_raster funktion
 # Nord , Ost , Süd, und West Boundaries zu beginn festgelegt
@@ -228,6 +223,12 @@ ElevM %>%
   plot_map()
 
 #________________________________
+# Define Image Size, Funktion von:
+# https://github.com/wcmbishop/rayshader-demo/blob/master/R/image-size.R
+# je höher major_dim, desto genauer die Auflösung des Overlays
+
+image_size <- define_image_size(bbox, major_dim = 7500); image_size
+
 # Download Overlay_image
 # Optionen für map_type sind:
 
